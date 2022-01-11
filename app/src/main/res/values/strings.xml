@@ -7,4 +7,6 @@
     <string name="password">Contraseña</string>
     <string name="sign_in">Iniciar Sesión</string>
     <string name="do_not_have_account"><u>Registrate Ahora!</u></string>
+    <string name="repeat_password">Repita la Contraseña</string>
+    <string name="register">Registrar</string>
 </resources>
