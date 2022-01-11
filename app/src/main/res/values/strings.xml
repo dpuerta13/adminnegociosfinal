@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">adminnegocios</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="email">Correo electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="sign_in">Iniciar Sesión</string>
+    <string name="do_not_have_account"><u>Registrate Ahora!</u></string>
+</resources>
