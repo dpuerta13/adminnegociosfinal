@@ -19,7 +19,6 @@
             android:name=".SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="true"
-            android:label="SplashActivity"
             android:theme="@style/Theme.Adminnegocios.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

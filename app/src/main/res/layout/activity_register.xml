@@ -29,8 +29,9 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/email_edit_text"
             android:layout_width="350dp"
-            android:layout_height="50dp"
-            android:hint="@string/email"/>
+            android:layout_height="match_parent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -49,7 +50,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:hint="@string/password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -70,13 +71,13 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/rep_password_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:hint="@string/repeat_password"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/Register_button"
+        android:id="@+id/register_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
