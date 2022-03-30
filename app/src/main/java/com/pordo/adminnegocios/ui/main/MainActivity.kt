@@ -1,4 +1,4 @@
-package com.pordo.adminnegocios
+package com.pordo.adminnegocios.ui.main
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.pordo.adminnegocios.R
+import com.pordo.adminnegocios.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,9 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var emailReceived: String? = ""
         var passwordReceived: String? = ""
-        var credentials :Bundle? = intent.extras
 
-        Toast.makeText(this, credentials?.getString("email"),Toast.LENGTH_LONG).show()
     }
     override fun onStart() {
         super.onStart()
@@ -44,21 +44,7 @@ class MainActivity : AppCompatActivity() {
         menuInflater.inflate(R.menu.overflow_menu, menu)
         return true
     }
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.Logout) {
-            var emailReceived: String? = ""
-            var passwordReceived: String? = ""
-            var credentials = intent.extras
-            emailReceived = credentials?.getString("email")
-            passwordReceived = credentials?.getString("password")
 
-            var intent = Intent(this, LoginActivity::class.java)
-            intent.putExtra("email",emailReceived)
-            intent.putExtra("password",passwordReceived)
-            startActivity(intent)
-        }
-        return super.onOptionsItemSelected(item)
-    }
 
 
     override fun onBackPressed() {

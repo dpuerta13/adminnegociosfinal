@@ -1,9 +1,10 @@
-package com.pordo.adminnegocios
+package com.pordo.adminnegocios.ui.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.pordo.adminnegocios.databinding.ActivitySplashBinding
+import com.pordo.adminnegocios.ui.login.LoginActivity
 import java.util.*
 import kotlin.concurrent.timerTask
 import java.util.Timer as Timer1
