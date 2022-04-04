@@ -113,7 +113,7 @@ class RegisterActivity : AppCompatActivity() {
             val email = emailEditText.text.toString()
             val password = passwordEditText.text.toString()
             val cellphone = cellphoneEditText.text.toString()
-            registerViewModel.saveUsers(name, email, password, cellphone)
+            registerViewModel.saveUsers(name,cellphone,email)
             val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
             startActivity(intent)
         }

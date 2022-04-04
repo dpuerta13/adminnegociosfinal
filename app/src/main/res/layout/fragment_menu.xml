@@ -11,74 +11,131 @@ tools:context=".ui.menu.MenuFragment">
         android:layout_width="408dp"
         android:layout_height="70dp"
         android:orientation="horizontal"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="2dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="com.pordo.adminnegocios.ui.menu.MenuFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <ImageView
+        android:id="@+id/dashboard_View"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="400dp"
+        android:src="@drawable/dashboard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/customer_service_View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+    <ImageView
+        android:id="@+id/customer_service_View"
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="400dp"
+        android:src="@drawable/customerservice"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/linearLayout" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/InventoryView"
         android:layout_width="120dp"
         android:layout_height="110dp"
-        android:src="@drawable/dashboard"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="123dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="120dp"
-        android:layout_height="110dp"
-        android:src="@drawable/customerservice"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.366" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="120dp"
-        android:layout_height="110dp"
+        android:layout_marginTop="88dp"
         android:src="@drawable/inventory"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintEnd_toStartOf="@+id/Delivery_View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_View" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/Delivery_View"
         android:layout_width="120dp"
         android:layout_height="110dp"
-        android:layout_marginBottom="88dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="60dp"
         android:src="@drawable/delivery"
-        app:layout_constraintBottom_toTopOf="@+id/imageView10"
-        app:layout_constraintEnd_toEndOf="@+id/fragmentContainerView"
-        app:layout_constraintStart_toEndOf="@+id/imageView7" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/customer_service_View" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="120dp"
         android:layout_height="110dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="100dp"
         android:src="@drawable/purchase"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="521dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InventoryView" />
 
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="120dp"
         android:layout_height="110dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="60dp"
         android:layout_marginBottom="100dp"
         android:src="@drawable/sales"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView9" />
+        app:layout_constraintTop_toBottomOf="@+id/Delivery_View" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:text="Dashboard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_View" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Servicio al cliente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/customer_service_View" />
+
+    <TextView
+        android:id="@+id/intentory_TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Inventario"
+        app:layout_constraintEnd_toStartOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InventoryView" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="90dp"
+        android:text="Envios"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Delivery_View" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Ventas"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="90dp"
+        android:text="Compras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,7 +6,12 @@ import androidx.core.util.PatternsCompat
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import com.pordo.adminnegocios.repository.UserRepository
+import com.pordo.adminnegocios.server.UserServer
+import com.pordo.adminnegocios.server.UserServerRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -15,8 +20,10 @@ import kotlinx.coroutines.launch
 import java.sql.Types
 
 class RegisterViewModel : ViewModel() {
+    private lateinit var auth: FirebaseAuth
 
     private val userRepository = UserRepository()
+    private val userServerRepository= UserServerRepository()
 
     private val msg: MutableLiveData<String> = MutableLiveData()
     val msgDone: LiveData<String> = msg
@@ -42,6 +49,13 @@ class RegisterViewModel : ViewModel() {
                     msg.value = "Debe digitar contrasena de mas de 6 digitos"
                 } else {
                     if (password.equals(repPassword)) {
+                        auth= Firebase.auth
+                        auth.createUserWithEmailAndPassword(email, password)
+                            .addOnCompleteListener { task ->
+                                if (task.isSuccessful) {
+
+                                }
+                            }
                         dataValidate.value = true
                     } else {
                         msg.value = "Las contrasenas no son iguales"
@@ -58,16 +72,14 @@ class RegisterViewModel : ViewModel() {
 
     fun saveUsers(
         name: String,
-        email: String,
-        password: String,
-        cellphone: String
+        cellphone: String,
+        email: String
     ) {
         GlobalScope.launch(Dispatchers.IO) {
-            userRepository.saveUser(
+            userServerRepository.saveUser(
                 name,
-                email,
-                password,
-                cellphone
+                cellphone,
+                email
             )
         }
     }

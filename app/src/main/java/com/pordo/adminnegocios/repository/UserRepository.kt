@@ -1,14 +1,11 @@
 package com.pordo.adminnegocios.repository
 
-import androidx.room.ColumnInfo
-import androidx.room.PrimaryKey
-import com.pordo.adminnegocios.db.adminnegocios
 import com.pordo.adminnegocios.db.entities.User
+import com.pordo.adminnegocios.db.adminnegocios
 import com.pordo.adminnegocios.db.UserDao
 import java.sql.Types.NULL
 
 class UserRepository {
-
     suspend fun saveUser(
         name: String,
         email: String,

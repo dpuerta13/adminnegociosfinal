@@ -26,4 +26,11 @@
     </style>
 
     <color name="blue">#0F01FC</color>
+    <style name="Theme.Adminnegocios.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Adminnegocios.AppBarOverlay"
+        parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Adminnegocios.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

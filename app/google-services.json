@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "495502391874",
+    "project_id": "adminnegocios-289f6",
+    "storage_bucket": "adminnegocios-289f6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495502391874:android:a2b3785983156a04b34bdb",
+        "android_client_info": {
+          "package_name": "com.pordo.adminnegocios"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495502391874-hflbvcdg7feb4vto0tp4oi5ugh9ibhnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHWsL0l2Xwh0JJSkD0t9QnijpvZsgEe4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495502391874-hflbvcdg7feb4vto0tp4oi5ugh9ibhnj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
